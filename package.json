@@ -7,7 +7,14 @@
     "api": "json-server --port 3333 api.json"
   },
   "devDependencies": {
-    "json-server": "0.10.1"
+    "json-server": "0.10.1",
+    "prettier": "^1.18.2"
   },
-  "author": "Theo Stanton"
+  "author": "Theo Stanton",
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+  }
 }
