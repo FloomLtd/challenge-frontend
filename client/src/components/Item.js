@@ -8,10 +8,23 @@ const containerCss = css`
     height: 320px;
     width: 820px;
     padding: 20px;
+    margin-bottom: 30px;
+    &:last-of-type {
+     margin-bottom: 0;
+    }
 `;
 
-function Item() {
-    return <div css={containerCss}>I'm item</div>;
+function Item({ image_urls, description, title, price, currency, tags }) {
+    return (
+        <div css={containerCss} >
+            <div>{title}</div>
+            <div>
+                {price} {currency}
+            </div>
+
+            <div>{description}</div>
+        </div>
+    );
 }
 
 export default Item;

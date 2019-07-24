@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { jsx, css, Global } from '@emotion/core';
-import Item from './components/Item';
+import ProductsContainer from './container/ProductsContainer';
 
 const globalCss = css`
     *,
@@ -9,22 +9,26 @@ const globalCss = css`
     *::after {
         box-sizing: border-box;
     }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background: rgb(241, 244, 247);
+    }
 `;
 
-const containerCss = css `
+const containerCss = css`
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-`
+`;
 
 function App() {
     return (
-        <div>
+        <div css={containerCss}>
             <Global styles={globalCss} />
-            <div css={containerCss}>
-                <Item />
-            </div>
+
+            <ProductsContainer />
         </div>
     );
 }
