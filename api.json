@@ -22,7 +22,7 @@
   "products": [
     {
       "id": 1342,
-      "merchant_id": 25123,
+      "merchantId": 25123,
       "description": "A simple but charming arrangement complete with its own little jar - perfect for small spaces and office desks alike!",
       "title": "Passion",
       "price": 25.00,
@@ -41,7 +41,7 @@
     {
       "id": 6785,
       "description": "Jam Jar arrangement made up of Thistle, Lisianthus and Carnation.",
-      "merchant_id": 25123,
+      "merchantId": 25123,
       "title": "Tutu",
       "price": 35.00,
       "currency": "GBP",
@@ -58,7 +58,7 @@
     {
       "id": 9432,
       "description": "Stunning Autumnal Thanksgiving themed bouquet full of colour and textures",
-      "merchant_id": 512981,
+      "merchantId": 512981,
       "title": "Waterfall",
       "price": 55.00,
       "currency": "GBP",
