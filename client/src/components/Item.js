@@ -2,6 +2,7 @@
 
 import { jsx, css } from '@emotion/core';
 import PrimaryButton from './PrimaryButton';
+import Roll, { ItemRoll } from 'nm-roll';
 
 const containerCss = css`
     display: flex;
@@ -13,12 +14,6 @@ const containerCss = css`
     &:last-of-type {
         margin-bottom: 0;
     }
-`;
-
-const imgCss = css`
-    height: 280px;
-    width: 280px;
-    object-fit: cover;
 `;
 
 const imgContainerCss = css`
@@ -84,12 +79,12 @@ const bottomCss = css`
     justify-content: flex-end;
     margin-top: 15px;
     flex: 1;
-`
+`;
 
 const bottomInnerCss = css`
     display: flex;
     align-items: flex-end;
-`
+`;
 
 function Item({
     image_urls,
@@ -103,10 +98,26 @@ function Item({
     return (
         <div css={containerCss}>
             <div css={imgContainerCss}>
-                <img
-                    src={`${process.env.PUBLIC_URL}/${image_urls[0]}.jpg`}
-                    alt="product"
-                    css={imgCss}
+                <Roll
+                    width={280}
+                    height={280}
+                    numberOfItems={image_urls.length}
+                    render={currentIndex =>
+                        image_urls.map((url, index) => (
+                            <ItemRoll
+                                width={280}
+                                source={`${process.env.PUBLIC_URL}/${url}.jpg`}
+                                key={url}
+                                isCurrent={index === currentIndex}
+                                isPrevious={
+                                    index ===
+                                    (currentIndex - 1 < 0
+                                        ? image_urls.length - 1
+                                        : currentIndex - 1)
+                                }
+                            />
+                        ))
+                    }
                 />
             </div>
             <div css={detailsContainer}>
@@ -128,9 +139,7 @@ function Item({
 
                 <div css={bottomCss}>
                     <div css={bottomInnerCss}>
-                        <PrimaryButton onClick={() => {}}>
-                            Buy
-                        </PrimaryButton>
+                        <PrimaryButton onClick={() => {}}>Buy</PrimaryButton>
                     </div>
                 </div>
             </div>
