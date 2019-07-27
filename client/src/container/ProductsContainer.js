@@ -1,11 +1,15 @@
-import useProducts from '../hooks/useProducts'
+import useProducts from '../hooks/useProducts';
+import { useStateValue } from '../hooks/useStateValue';
 
-function ProductsContainer({ render }) {
+function ProductsContainer({ filterByTag, filterByCoord, render }) {
     const products = useProducts();
+    const [
+        {
+            filters: { tag, coord },
+        },
+    ] = useStateValue();
 
-    return (
-        render(products)
-    );
+    return render(filterByCoord(filterByTag(products, tag), coord));
 }
 
 export default ProductsContainer;
