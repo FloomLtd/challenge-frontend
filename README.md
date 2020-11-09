@@ -1,6 +1,6 @@
 # Floom Frontend Challenge
 
-Great you're looking to get involved with Floom. Create  new private Github repo, push your solution and add us as a collaborator when you're ready. Add github handles `theostanton`, `bradlocking` and `ahnunn` as collaborators.
+Great you're looking to get involved with Floom. Create new private Github repo, push your solution and add us as a collaborator when you're ready. Add github handles, `ahnunn` and `bradlocking` as collaborators.
 
 ## Brief
 
