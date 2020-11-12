@@ -8,7 +8,7 @@ We have a simple api, a lazy designer and some technically competent users. With
 
 ## Design
 
-The basic designs are over [here](https://whimsical.co/A8oN1FGgwZCfiZXvicER6A). The designer left the office muttering something about "32 point padding...". Make any assumptions you need to in her absence.
+The basic designs are over [here](https://whimsical.com/frontend-challenge-A8oN1FGgwZCfiZXvicER6A). The designer left the office muttering something about "32 point padding...". Make any assumptions you need to in her absence.
 
 ## Data
 
